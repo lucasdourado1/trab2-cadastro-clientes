@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de clientes - Fatec Itu</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Cadastro de Clientes</h1>
+    <div class="flex">
+        <div class="send">
+            <form name="enviarCliente" method="POST">
+                <div class="form-group">
+                    <label for="codigo">Código</label>
+                    <input type="number" name="codigo" id="codigo" required>
+                </div>
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="cep">CEP</label>
+                    <input type="tel" name="cep" id="cep" required minlength="8" maxlength="9">
+                </div>
+                <div class="form-group">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" name="endereco" id="endereco" required>
+                </div>
+                <div class="form-group">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" name="bairro" id="bairro" required>
+                </div>
+                <div class="form-group">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" name="cidade" id="cidade" required>
+                </div>
+                <div class="form-group">
+                    <label for="dataNasc">Data de Nascimento</label>
+                    <input type="date" name="dataNasc" id="dataNasc" required>
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" name="cpf" id="cpf" required>
+                </div>
+                <div class="form-group">
+                    <label for="cnh">Possui CNH?</label>
+                    <select name="cnh" id="cnh">
+                        <option value="não possui">Não possui</option>
+                        <option value="cnh a">CNH A</option>
+                        <option value="cnh ab">CNH AB</option>
+                        <option value="cnh b">CNH B</option>
+                        <option value="cnh c">CNH C</option>
+                        <option value="cnh d">CNH D</option>
+                        <option value="cnh e">CNH E</option>
+                    </select>
+                </div>
+                <div class="form-group w-100">
+                    <label for="obs">Observações</label>
+                    <textarea name="obs" id="obs"></textarea>
+                </div>
+                <button id="btnSalvar">&#9989; Salvar</button>
+                <button id="btnCancelar">&#10060; Cancelar</button>
+            </form>
+        </div>
+        <div id="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
